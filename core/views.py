@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import request
 from django.views.decorators.csrf import ensure_csrf_cookie
-from core.forms import ContatoForm
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from core.forms import Curso
 
 def index (requisito):
     return render(requisito,'index.html')
@@ -49,3 +50,40 @@ def notasprof (requisito):
 def meusdadosprof (requisito):
     return render (requisito,'meus_dados_professor.html')
 
+from aluno import Aluno
+class Arquivos_Resposta(Aluno):
+
+    def _init_(self):
+        self.nome_disciplina = None
+        self.ano_ofertado = None
+        self.semestre_ofertado = None
+        self.id_turma = None
+        self.numero_questao = None
+        self.ra_aluno = self.ra
+        self.arquivo = None
+
+    '''Característica 38 - Resumo das entregas pendentes (professor).'''
+
+    def entregas_pendentes(self):
+        lista_concluido = []
+        lista_pendente = []
+        for i in lista_pendente:
+            lista_pendente.append(self.ra_aluno)
+            if self.arquivo == True:
+                lista_pendente.remove(self.ra_aluno)
+                lista_concluido.append(self.ra_aluno)
+
+        return (lista_pendente)
+
+    '''Característica 37 - Resumo das entregas ecebidas (professor)'''
+
+    def entregas_concluidas(self):
+        lista_concluido = []
+        lista_pendente = []
+        for i in lista_pendente:
+            lista_pendente.append(self.ra_aluno)
+            if self.arquivo == True:
+                lista_pendente.remove(self.ra_aluno)
+                lista_concluido.append(self.ra_aluno)
+
+        return (lista_concluido)
