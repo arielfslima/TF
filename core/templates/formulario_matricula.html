@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block scripts %}
+<html>
+	<head>
+		<link type="text/css" href="/static/estilo.css" rel="stylesheet"/>
+		<title>Matrícula</title>
+	</head>
+{% endblock %}
+{% block conteudo %}
+<body>
+	<ul>
+		<menu><a href="index.html">Home</a></menu>
+        <menu><a href="cursos.html">Cursos</a></menu>
+        <menu><a href="noticias.html">Notícias</a></menu>
+        <menu><a href="matricula.html">Matricule-se</a></menu>
+        <menu><a href="areaAluno.html">Área do Aluno</a></menu>
+        <menu><a href="areaProfessor.html">Área do Professor</a></menu>
+        <menu><a href="Coordenador.html">Área Restrita</a></menu>
+        <menu><a href="">Fale Conosco</a></menu>
+	</ul>
+		<h1>Cadastro</h1></br>
+		<form action="novousuário" method="post" id="novouser"></p>
+			{% csrf_token %}
+			<label for="nome">Nome Completo:</label></br>
+			<input class="cadd" type="text" name="nomecompleto"></br> 
+			</br>
+			<input for="ra">Insira um RA:</label></br>
+			<input class="num" type="text" placeholder="Insira só Números"></br>
+			</br>
+			<label for="senha">Insira uma senha:</label></br>
+			<input type="password" name="senhadousuario"></br>
+			</br>
+			<label for="sexo">Sexo:</label></br></br>
+			<input type="radio" name="genero" value="masculino" checked>Masculino</br>
+			<input type="radio" name="genero" value="feminino" checked>Feminino</br>
+			<input type="radio" name="genero" value="outro" checked>Outro</br>
+			</br>
+			<label for="datanasc">Data de Nascimento:</label></br>
+			<input type="date" name="datanasc"></br>
+			</br>
+			<label for="RG">RG (apenas números):</label></br>
+			<input type="number" name="RG" maxlength="9" size="9">
+			</br>
+			<label for="CPF">CPF(apenas números):</label></br>
+			<input type="number" name="CPF" maxlength="11" size="11">
+			</br>
+			<label for="RA">RA(apenas números):</label></br>
+			<input type="number" name="RA" maxlength="7" size="7">
+			</br>
+			<label for="email">E-mail:</label></br>
+			<input type="email" name="email">
+			</br>
+			<label for="telefone">Telefone (Com DDD):</label></br>
+			<input type="number" name="telefone" maxlength="12" OnKeyPress="formatar('##-####-####')">
+			</br>
+			<label for="curso">Curso:</label></br>
+			<input class="cadd" type="text" name="curso">
+			</br>
+			<label for="endereco">Endereço:</label></br>
+			</br>
+			</br>
+			<li>Estado: </br><input class="cadd" type="text" name="estado"></br></li></br>
+			<li>Cidade: </br><input class="cadd" type="text" name="cidade"></br></li></br>
+			<li>Bairro: </br><input class="cadd" type="text" name="bairro"></br></li></br>
+			<li>Endereço: </br><input class="cadd" type="text" name="endereço"></br></li></br>
+			<li>Número: </br><input class="cadd" type="text" name="número"></br></li>
+			</br>
+			</br>		
+			<input type="submit" value="Enviar" method="post"></br></br>
+			{% endblock %}
+		</form>
+	</body>
+</html>
+

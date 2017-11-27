@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block scripts %}
+<html>
+	<head>
+		<link type="text/css" href="/static/estilo.css" rel="stylesheet"/>
+		<title>Notas do Aluno</title>
+	</head>
+{% endblock %}
+{% block conteudo %}
+	<body>
+		<center><strong>Notas dos alunos</strong></center></br>
+		<div id="navbar" class="nav-collapse" aria-expanded="false">
+			<ul class="nav navbar-nav nav-bar-1">
+					<ul class="dropdown-menu" role="menu">
+							<menu><a href="areaProfessor.html">Home</a></menu>
+							<menu><a href="dadosprof.html">Dados Pessoais</a></menu>
+							<menu><a href="notasprof.html">Notas</a></menu>
+							<menu><a href="">Frequência</a></menu>
+							<menu><a href="">Horários</a></menu>
+							<menu><a href="contatos_profs_prof.html">Contato dos Professores</a></menu>
+
+					</ul>
+			</ul>
+		</div>
+		</br>
+	</body>
+</html>
+{% endblock %}

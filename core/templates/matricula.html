@@ -1,0 +1,27 @@
+{% extends "restrito/base_restrito.html" %}
+{% load static %}
+
+{% block titulo_restrito %}Matrícula{% endblock %}
+
+{% block restrito_conteudo %}
+    <h2>Matrícula</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="buscar_ano">Ano:</label>
+        <input id="buscar_ano" name="ano" type="number">
+        <label for="buscar_semestre">Semestre:</label>
+        <input id="buscar_semestre" name="semestre" type="number">
+        <button type="submit">Buscar</button>
+    </form>
+    {% if not turmas is None %}
+      <h3>Turmas disponíveis no Período</h3>
+      <ul>
+          {% for turma in turmas  %}
+            <li>{{ turma }}</li>
+          {% empty %}
+            <li>Não há ofertas para esse período</li>
+          {% endfor %}
+      </ul>
+    {% endif %}
+
+{% endblock %}

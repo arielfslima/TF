@@ -1,0 +1,23 @@
+<title>MAGTV - {{ index }}</title>
+{% block scripts %}
+<html>
+    <head>   
+        <link type="text/css" href="/static/estilo.css" rel="stylesheet"/>
+    </head>
+{% endblock %}
+<header>
+    <h1><strong>Faculdade MAGTV</strong></h1>
+    {% if user.is_authenticated %}
+     Olá {{user.username}}!
+     <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+     <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+</header>
+<section>
+    {% block conteudo%}
+    {% endblock %}
+</section>  
+<footer>
+    <center>&copy; Todos os direitos reservados 2017</center>
+</footer

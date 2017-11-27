@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block scripts %}
+<html>
+	<head>
+		<link type="text/css" href="/static/estilo.css" rel="stylesheet"/>
+		<title>Área do Aluno</title>
+	</head>
+{% endblock %}
+{% block conteudo %}
+<body>
+	<center><strong>Seja Bem-vindo aluno !</strong></center></br>
+	<div id="navbar" class="nav-collapse" aria-expanded="false">
+		<ul class="dropdown-menu" role="menu">
+		    <menu><a href="index.html">Home</a></menu>
+			<menu><a href="dadosAlunos.html">Dados Pessoais</a></menu>
+			<menu><a href="notasaluno.html">Notas</a></menu>
+			<menu><a href="http://localhost:8000/">Frequência</a></menu>
+			<menu><a href="contatoProf.html">Contato dos Professores</a></menu>
+			<menu><a href="">Fale Conosco</a></menu>
+		</ul>
+	</div>
+	</br>
+</body>
+</html>
+{% endblock %}
