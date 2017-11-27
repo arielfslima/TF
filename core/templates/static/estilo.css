@@ -1,0 +1,122 @@
+head {
+	margin: 20em 20em;
+}
+
+body {
+	background-color: #00BFFF;
+	padding: 10px 20px;
+	position: absolute;
+    left: 30px;
+    top: auto;
+    right: 30px;
+}
+footer {
+	background-color: #00BFFF;
+	position: center;
+}
+menu {
+	display: block;
+	float: left;
+	position: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0% 18%;
+    overflow: auto;
+}
+
+a:link{
+    color:blue;
+}
+
+
+@media all{
+	
+}
+
+.noticias{
+	position: center;
+}
+table {
+	table-layout: auto;
+    background-color: LightGray
+	
+}
+/* form.cad { */
+	/* position: auto; */
+}
+form {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: black;
+}
+
+textarea{ 
+	background-color: LightGray;
+	color: black;
+	border: none; 
+	border-bottom: 2px solid black;	
+	width: auto;
+    padding: 12px 20px;
+    margin: 8px 2px;
+}
+
+input.cadd {
+	margin: auto;
+    width: unset;
+	padding: 10px 10px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+	background-color: LightGray;
+}
+
+input[type=text] {
+	margin: auto;
+    width: unset;
+	padding: 10px 10px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+	background-color: LightGray;
+}
+
+input[type=date] {
+    width: unset;
+    padding: 10px 25px;
+    margin: 10px 0px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    background-color: LightGray;
+}
+
+input[type=email] {
+    width: unset;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+	background-color: LightGray;
+}
+
+input[type=number] {
+    width: unset;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+	background-color: LightGray;
+}	
+
+input[type=submit] {
+	background-color: LightGray;
+    border-radius: 10px;
+    border: 3px inset black;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin: 4px 0px;
+    cursor: pointer;
+    font-size: 18px;
+}
