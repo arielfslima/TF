@@ -1,16 +1,20 @@
-{% extends 'base.html' %}
+{% extends 'base_restrito.html' %}
 {% block scripts %}
 <html>
 	<head>
 		<link type="text/css" href="/static/estilo.css" rel="stylesheet"/>
-		<title>Área do Aluno</title>
 	</head>
+{% endblock %}
+{% block title %}
+	Área do Aluno
 {% endblock %}
 {% block conteudo %}
 <body>
 	<center><strong>Seja Bem-vindo aluno !</strong></center></br>
-	<div id="navbar" class="nav-collapse" aria-expanded="false">
-		<ul class="dropdown-menu" role="menu">
+	<div>
+		<h2>Turmas</h2>
+		
+		<ul>
 		    <menu><a href="http://localhost:8000">Home</a></menu>
 			<menu><a href="http://localhost:8000/dadosAlunos/">Dados Pessoais</a></menu>
 			<menu><a href="http://localhost:8000/notasaluno/">Notas</a></menu>
